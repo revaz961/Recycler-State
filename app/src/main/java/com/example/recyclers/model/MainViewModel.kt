@@ -1,10 +1,9 @@
-package com.example.recyclers
+package com.example.recyclers.model
 
 import android.app.Application
 import android.util.Log.d
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

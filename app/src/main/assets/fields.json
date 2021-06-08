@@ -59,7 +59,7 @@
       "field_id":898,
       "hint":"Gender",
       "field_type":"chooser",
-      "required":false,
+      "required":"false",
       "is_active":true,
       "icon":"https://jemala.png"
     }

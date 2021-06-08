@@ -1,10 +1,11 @@
-package com.example.recyclers
+package com.example.recyclers.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclers.databinding.FieldsLayoutBinding
+import com.example.recyclers.model.Field
 
 class FieldsGroupAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var fieldsGroup = mutableListOf<MutableList<Field>>()

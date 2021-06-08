@@ -1,4 +1,4 @@
-package com.example.recyclers
+package com.example.recyclers.model
 
 data class User(
     var email: String = "",

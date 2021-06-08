@@ -1,21 +1,19 @@
-package com.example.recyclers
+package com.example.recyclers.adapter
 
 import android.os.Build
 import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
-import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.RadioButton
 import androidx.core.view.children
 import androidx.core.view.forEach
-import androidx.core.view.get
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclers.databinding.ChooserDateLayoutBinding
 import com.example.recyclers.databinding.ChooserGenderLayoutBinding
 import com.example.recyclers.databinding.InputLayoutBinding
-import kotlin.random.Random
+import com.example.recyclers.model.Field
 
 class FieldsAdapter(
     private val fieldsState: MutableMap<Int, String>, private val saveState: (Int, String) -> Unit

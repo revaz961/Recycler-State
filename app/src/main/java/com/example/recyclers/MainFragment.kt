@@ -6,10 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.recyclers.adapter.FieldsGroupAdapter
 import com.example.recyclers.databinding.FragmentMainBinding
+import com.example.recyclers.model.Field
+import com.example.recyclers.model.MainViewModel
+import com.example.recyclers.model.User
 import com.google.android.material.snackbar.Snackbar
 
 
