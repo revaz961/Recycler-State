@@ -1,6 +1,7 @@
 package com.example.recyclers
 
 import android.os.Bundle
+import android.util.Log.d
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -57,36 +58,30 @@ class MainFragment : Fragment() {
             fields.forEach {
                 when (it.hint) {
                     "UserName" -> {
-                        if (view is EditText)
                             user.userName = fieldsState[it.fieldId]
                     }
                     "Email" -> {
-                        if (view is EditText)
                             user.email = fieldsState[it.fieldId]!!
                     }
                     "phone" -> {
-                        if (view is EditText)
-                            user.email = fieldsState[it.fieldId]!!
+                            user.phoneNumber = fieldsState[it.fieldId]!!
                     }
                     "Full Name" -> {
-                        if (view is EditText)
                             user.fullName = fieldsState[it.fieldId]!!
                     }
                     "Jemali" -> {
-                        if (view is EditText)
                             user.name = fieldsState[it.fieldId]
                     }
                     "Birthday" -> {
-                        if (view is DatePicker)
                             user.birthDay = fieldsState[it.fieldId]
                     }
                     "Gender" -> {
-                        if (view is RadioGroup)
                             user.gender = fieldsState[it.fieldId]
                     }
                 }
             }
             users.add(user)
+            showUsers()
         }
     }
 
@@ -126,5 +121,11 @@ class MainFragment : Fragment() {
 
     private fun showMessage(message: String) {
         Snackbar.make(binding!!.root, "invalid input $message", Snackbar.LENGTH_LONG).show()
+    }
+
+    private fun showUsers(){
+        users.forEach {
+            d("users",it.toString())
+        }
     }
 }

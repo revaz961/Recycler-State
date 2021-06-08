@@ -130,11 +130,11 @@ class FieldsAdapter(
             binding.root.id = fields[adapterPosition].fieldId
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 binding.root.setOnDateChangedListener { view, year, monthOfYear, dayOfMonth ->
-                    saveState(fields[adapterPosition].fieldId, "$year $monthOfYear $dayOfMonth")
+                    saveState(fields[adapterPosition].fieldId, "$year/$monthOfYear/$dayOfMonth")
                 }
             }
             if (fieldsState.containsKey(fields[adapterPosition].fieldId)) {
-                var date = fieldsState[fields[adapterPosition].fieldId]?.split(" ")
+                var date = fieldsState[fields[adapterPosition].fieldId]?.split("/")
                 binding.root.updateDate(date!![0].toInt(), date!![1].toInt(), date!![2].toInt())
             }
         }
