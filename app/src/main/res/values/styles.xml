@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyDatePicker" parent="android:Widget.Material.Light.DatePicker">
+        <item name="android:textColorPrimary">@color/textColor</item>
+        <item name="colorControlNormal">@color/textColor</item>
+    </style>
+</resources>
